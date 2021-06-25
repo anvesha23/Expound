@@ -1,0 +1,33 @@
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+}
+
+@media (max-width: 500px) {
+  #empty-column {
+    display: none!important;
+  }
+}
+
+.btn.btn-outline-warning.btn-xl.js-scroll-trigger {
+  border-color: rgb(0,182,91);
+}
+
+.btn.btn-outline-warning.btn-xl.js-scroll-trigger:hover {
+  background-color: rgb(34,58,118)!important;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  color: #18bc9c!important;
+}
+
+@media (max-width: 700px) {
+  .col-lg-4.col-xl-5.mr-auto {
+    margin-left: 0px!important;
+  }
+}
+
+@media (max-width: 700px) {
+  .col-lg-5.col-xl-5.mr-auto {
+    margin-left: 0px!important;
+  }
+}
+

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="bg-primary text-white mb-0" style="background-size: cover;background-position: top;background-repeat: no-repeat;opacity: 1;background-color: rgba(255,255,255,0)!important;filter: invert(0%);padding-bottom: 70px;background-image: url(&quot;{% static 'img/image.jpeg' %}&quot;);">
+        <div class="container border rounded-0" style="border: none!important;">
+            <div class="row" style="border: none!important;">
+                <div class="col-lg-5 col-xl-12 text-center mr-auto" style="background-color: rgba(255,255,255,0);opacity: 1;padding-left: 0px;margin-top: 40px;">
+                    <h1 class="text-uppercase text-center text-white" style="color: rgb(255,255,255);padding-top: 40px;text-transform: none!important;font-family: ABeeZee, sans-serif;padding-left: 40px;text-decoration: underline;font-size: 20px;margin-bottom: 0px;">Services</h1>
+                    <h1 class="text-uppercase text-center text-white" style="color: rgb(0,0,0)!important;text-transform: none!important;font-family: ABeeZee, sans-serif;padding-left: 80px;"><span style="color: rgb(168,237,242);font-weight: normal;font-family: ABeeZee, sans-serif;font-size: 25px;">SAP Consulting</span><span style="color: rgb(255,93,0);">.&nbsp;</span></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="padding-top: 0px;">
+        <div class="container border rounded-0" style="margin-top: 20px;">
+            <h3 class="text-center" style="font-size: 30px;font-family: ABeeZee, sans-serif;color: rgb(75,135,182);margin-top: 30px;"><strong>SAP Services</strong><br></h3>
+            <hr>
+            <ul class="list-group text-left" style="border: 0.0px solid rgb(91,147,171);">
+                <li class="list-group-item" style="border: 0px;">
+                    <h4 class="text-left" style="font-family: ABeeZee, sans-serif;"><i class="fa fa-star" style="color: rgba(33,37,41,0);background-image: url(&quot;{% static 'img/Icon/check.svg' %} &quot;);background-size: contain;background-repeat: no-repeat;font-size: 25px;"></i><strong>&nbsp;Implementation</strong><br></h4>
+                    <span
+                        style="color: rgb(102,102,102);margin-left: 30px;font-size: 20px;font-family: ABeeZee, sans-serif;">End to End Implementation any SAP business suit and S4HANA<br></span>
+                </li>
+                <li class="list-group-item" style="border: 0px;">
+                    <h4 class="text-left" style="font-family: ABeeZee, sans-serif;"><i class="fa fa-star" style="color: rgba(33,37,41,0);background-image: url(&quot;{% static 'img/Icon/check.svg' %}&quot;);background-size: contain;background-repeat: no-repeat;font-size: 25px;"></i><strong>&nbsp;Offshore Support</strong><br></h4>
+                    <span
+                        style="color: rgb(102,102,102);margin-left: 30px;font-size: 20px;">SAP App maintenance and services.<br></span>
+                </li>
+                <li class="list-group-item" style="border: 0px;">
+                    <h4 class="text-left" style="font-family: ABeeZee, sans-serif;"><i class="fa fa-star" style="color: rgba(33,37,41,0);background-image: url(&quot;{% static 'img/Icon/check.svg' %}&quot;);background-size: contain;background-repeat: no-repeat;font-size: 25px;"></i><strong>&nbsp;Upgrade and Migration</strong><br></h4>
+                    <span
+                        style="color: rgb(102,102,102);margin-left: 30px;font-size: 20px;">Version migration services<br></span>
+                </li>
+                <li class="list-group-item" style="border: 0px;">
+                    <h4 class="text-left" style="font-family: ABeeZee, sans-serif;"><i class="fa fa-star" style="color: rgba(33,37,41,0);background-image: url(&quot;{% static 'img/Icon/check.svg' %}&quot;);background-size: contain;background-repeat: no-repeat;font-size: 25px;"></i><strong>&nbsp;Audit</strong><br></h4><span style="color: rgb(102,102,102);margin-left: 30px;font-size: 20px;">SAP system audit with pre and post<br></span></li>
+            </ul>
+        </div>
+    </section>
+    {% endblock %}

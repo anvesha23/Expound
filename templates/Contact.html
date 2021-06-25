@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+    <section class="bg-primary text-white mb-0" style="background-size: cover;background-position: top;background-repeat: no-repeat;opacity: 1;background-color: rgba(255,255,255,0)!important;filter: invert(0%);padding-bottom: 70px;background-image: url(&quot;{%  static 'img/image.jpeg' %}&quot;);">
+        <div class="container border rounded-0" style="border: none!important;">
+            <div class="row" style="border: none!important;">
+                <div class="col-lg-5 col-xl-12 text-center mr-auto" style="background-color: rgba(255,255,255,0);opacity: 1;padding-left: 0px;margin-top: 40px;">
+                    <h1 class="text-uppercase text-center text-white" style="color: rgb(255,255,255);padding-top: 40px;text-transform: none!important;font-family: ABeeZee, sans-serif;padding-left: 40px;text-decoration: underline;font-size: 20px;margin-bottom: 0px;">Contact</h1>
+                    <h1 class="text-uppercase text-center text-white" style="color: rgb(0,0,0)!important;text-transform: none!important;font-family: ABeeZee, sans-serif;padding-left: 80px;"><span style="color: rgb(168,237,242);font-weight: normal;font-family: ABeeZee, sans-serif;font-size: 25px;">We're here for you</span><span style="color: rgb(255,93,0);">.&nbsp;</span></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="padding-top: 0px;">
+        <div class="container border rounded-0" style="margin-top: 20px;">
+            <h3 class="text-center" style="font-size: 30px;font-family: ABeeZee, sans-serif;color: rgb(75,135,182);margin-top: 30px;"><strong>Feel free to reach out to us</strong><br></h3>
+            <hr>
+            <form method="POST" class="container">
+                {% csrf_token %}    
+                {% for field in form.visible_fields %}
+                <div class="form-group">
+                    <p style="text-align: left!important; font-size: 2  0px;"> {{ field.label_tag }}</p>
+                    {% render_field field class="form-control" %}
+                    {% if field.help_text %}
+                <small class="form-text text-muted">{{ field.help_text }}</small>
+                {% endif %}
+                </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary ">Submit</button>
+              </form>   
+            <!-- Contact form -->
+            <!-- <form  >
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Leave a message</button>
+            </form> -->
+            <!-- Contact form ends -->
+            <ul class="list-group text-left" style="border: 0.0px solid rgb(91,147,171);">
+                <li class="list-group-item" style="border: 0px;">
+                    <h4 class="text-left" style="font-family: ABeeZee, sans-serif;"><i class="fa fa-envelope-o" style="color: #212529;background-size: contain;background-repeat: no-repeat;font-size: 25px;"></i>&nbsp;Emails:</h4>
+                    <p><span><a href="mailto:recipient@expoundtechnivo.com.com?cc=hr@expoundtechnivo.com" style="color: rgb(50,50,50);font-family: ABeeZee, sans-serif;font-size: 20px;margin-left: 30px;"><span style="text-decoration: underline;">HR: hr@expoundtechnivo.com</span></a>
+                        </span>
+                    </p>
+                    <p><span><a href="mailto:recipient@expoundtechnivo.com.com?cc=expound.sales@expoundtechnivo.com" style="color: rgb(50,50,50);font-family: ABeeZee, sans-serif;font-size: 20px;margin-left: 30px;"><span style="text-decoration: underline;">Sales: expound.sales@expoundtechnivo.com</span></a>
+                        </span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    {% endblock %}

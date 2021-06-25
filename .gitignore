@@ -1,0 +1,9 @@
+/venv
+__pycache__/
+*.py[cod]
+.DS_Store
+cron_mail_deferred.log
+/files
+cron_mail.log
+db.sqlite3
+

@@ -1,0 +1,476 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- for solutions we offer mobile view  -->
+    <style>
+        @media (min-width: 700px) {
+              .solutionweoffer {
+                  margin-bottom: 50px;
+                  margin-top: 260px!important ;
+                }
+              }
+    </style>
+    <!-- for solutions we offer mobile view  -->
+
+    <section class="bg-primary text-white mb-0" style="background-image: url(&quot;{% static 'img/austin-distel-wawEfYdpkag-unsplash.jpg' %}&quot;);background-size: cover;background-position: 50%;background-repeat: no-repeat;opacity: 1;margin-top: 105px;background-color: rgba(255,255,255,0)!important;filter: invert(0%);">
+        <div class="container border rounded-0" style="border: none!important;">
+            <div class="row" style="border: none!important;">
+                <div class="col-xl-6 offset-xl-0" style="opacity: 0;"></div>
+                <div class="col-lg-4 col-xl-5 text-center mr-auto" style="padding-bottom: 41px;background-color: rgba(255,255,255,0.5);opacity: 1;border: solid;color: rgb(255,255,255);">
+                    <h2 class="text-uppercase text-center text-white" style="color: rgb(0,0,0)!important;padding-top: 50px;font-size: 50px;text-transform: none!important;font-family: ABeeZee, sans-serif;">We at Expound</h2>
+                    <p class="lead" style="color: rgb(0,0,0);padding-left: 30px;background-color: rgba(152,152,152,0);font-family: ABeeZee,;">A full service provider of SAP solutions, we offer our customers a broad range of SAP consulting and support services.</p><a class="btn btn-outline-light btn-xl" role="button" id="landing-img-button" href="{% url 'contact' %}" style="color: rgb(7,11,8);border-color: rgb(45,80,112);margin-top: 10px;background-color: rgba(248,249,250,0.38);"><span>Get in touch &gt;</span></a></div>
+            </div>
+        </div>
+    </section>
+    <header class="masthead bg-primary text-white text-center" style="background-color: rgb(255,255,255)!important;padding-top: 30px;padding-bottom: 30px;">
+        <h1 class="mb-5" style="font-size: 30px;font-weight: bold;color: rgb(0,0,0);margin-bottom: 10px!important;font-family: ABeeZee, sans-serif;"><strong>Global Capabilities, Local Excellence.</strong></h1>
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-lg-7 col-xl-4">
+                    <div class="text-left mx-auto header-content" style="text-align: center!important;">
+                        <h1 class="mb-5" style="font-size: 30px;font-weight: bold;color: rgb(0,0,0);margin-bottom: 10px!important;text-align: left;">Making your business grow&nbsp;</h1>
+                        <h1 class="mb-5" style="font-size: 20px;font-weight: normal;color: rgb(0,0,0);margin-bottom: 10px!important;text-align: left;">We at expound have something special. We call it The Expound Difference !&nbsp;</h1>
+                        <h1 class="mb-5" style="font-size: 20px;font-weight: normal;color: rgb(0,0,0);margin-bottom: 10px!important;text-align: left;">&nbsp;<a href="{% url 'aboutpage' %}">Know More</a></h1>
+                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="imac-mockup"><img class="device" src="{% static 'img/imac.svg' %}">
+                        <div class="screen" style="background-color: #ffffff;background-image: url(&quot;none&quot;);">
+                            <div style="padding-top: 30px;"><canvas data-bs-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;4500&quot;,&quot;5300&quot;,&quot;6250&quot;,&quot;7800&quot;,&quot;9800&quot;,&quot;15000&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{&quot;display&quot;:false}}}"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section style="padding-top: 0px;">
+        <div class="container" style="border-top: 1px solid rgb(224,224,224);padding-top: 40px;">
+            <h1 id="service-offering-heading" style="font-family: ABeeZee, sans-serif;color: rgb(91,91,91);">Service Offerings</h1>
+            <div class="card-group">
+                <div class="card" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-sap-consulting' %}"><i class="la la-cubes" style="color: rgb(69,176,238);"></i></a></h4>
+                        <h4 class="card-title" id="service-offering-heading"><a href="{% url 'services-sap-consulting' %}" style="color: rgb(91,91,91);font-family: ABeeZee, sans-serif;font-weight: normal;">SAP Consulting</a></h4>
+                    </div>
+                </div>
+                <div class="card" id="service-offering-heading" style="border-top: 0px;border-bottom: 0px;">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-corporate-training' %}"><i class="la la-industry" style="color: rgb(69,176,238);"></i></a></h4>
+                        <h4 class="card-title" id="service-offering-heading"><a href="{% url 'services-corporate-training' %}" style="font-family: ABeeZee, sans-serif;font-weight: normal;color: rgb(91,91,91);">Corporate Training</a></h4>
+                    </div>
+                </div>
+                <div class="card" id="service-offering-heading" style="border-bottom: 0px;border-top: 0px;">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-professional-services' %}"><i class="la la-suitcase" style="color: rgb(69,176,238);"></i></a></h4>
+                        <h4 class="card-title" id="service-offering-heading" style="text-align: center;"><a href="{% url 'services-professional-services' %}" style="font-family: ABeeZee, sans-serif;color: rgb(91,91,91);font-weight: normal;">Professional Services</a></h4>
+                    </div>
+                </div>
+                <div class="card" id="service-offering-heading" style="border-top: 0px;border-bottom: 0px;">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-program-management' %}"><i class="fas fa-people-carry" style="color: rgb(69,176,238);"></i></a></h4>
+                        <h4 class="card-title" id="service-offering-heading" style="text-align: center;color: rgb(91,91,91);font-weight: normal;font-family: ABeeZee, sans-serif;"><a href="{% url 'services-program-management' %}" style="color: rgb(91,91,91);font-weight: normal;font-family: ABeeZee, sans-serif;">Program Management</a></h4>
+                    </div>
+                </div>
+                <div class="card" id="service-offering-heading" style="border-bottom: 0px;border-top: 0px;border-right: 0px;">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-center-of-excellence' %}"><i class="la la-globe" style="color: rgb(69,176,238);"></i></a></h4>
+                        <h4 class="card-title" id="service-offering-heading" style="font-family: ABeeZee, sans-serif;color: rgb(91,91,91);"><a href="{% url 'services-center-of-excellence' %}" style="color: rgb(91,91,91);">Center of Excellence</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="background-color: rgb(245,245,245);padding-top: 40px;">
+        <h1 style="text-align: center;margin-bottom: 20px;">The Expound Difference !</h1>
+        <div class="container border rounded-0" style="padding-top: 15px;background-color: #ffffff;">
+            <div class="card-group">
+                <div class="card" style="border-width: 0px;">
+                    <div class="card-body" style="background-image: url(&quot;{% static 'img/0_1.jpg' %}&quot;);background-repeat: no-repeat;text-align: left;">
+                        <p class="card-text">First Step</p>
+                        <h4 class="card-title" style="font-weight: normal;"><strong>Product</strong></h4>
+                        <p class="card-text">Our solutions, accelerators, repository, reduce project risks and duration which help in Rapid Implementation with Fast Run Approach.</p>
+                        <div style="width: 20px;height: 2.5px;background-color: rgb(37,224,203);"></div>
+                    </div>
+                </div>
+                <div class="card" style="border-width: 0px;">
+                    <div class="card-body" style="background-image: url(&quot;{% static 'img/0_2.jpg' %}&quot;);background-repeat: no-repeat;text-align: left;">
+                        <p class="card-text">Second Step</p>
+                        <h4 class="card-title" style="font-weight: normal;"><strong>Process</strong></h4>
+                        <p class="card-text">SAP Business process management tool with activate methodology for implementation, automative support tool to improve service delivery and efficiency.</p>
+                        <div style="width: 20px;height: 2.5px;background-color: rgb(37,224,203);"></div>
+                    </div>
+                </div>
+                <div class="card" style="border-width: 0px;">
+                    <div class="card-body" style="background-image: url(&quot;{% static 'img/0_3.jpg' %}&quot;);background-repeat: no-repeat;text-align: left;">
+                        <p class="card-text">Third step</p>
+                        <h4 class="card-title" style="font-weight: normal;"><strong>Human Capital</strong><br></h4>
+                        <p class="card-text">Human capital refers to the employees Skill, knowledge, experience and their capabilities to deliver stake holders expectations.Therefore we attract, develop and retain the best people.</p>
+                        <div style="width: 20px;height: 2.5px;background-color: rgb(37,224,203);"></div>
+                    </div>
+                </div>
+                <div class="card" style="border-width: 0px;">
+                    <div class="card-body" style="background-image: url(&quot;{% static 'img/0_4.jpg' %}&quot;);background-repeat: no-repeat;text-align: left;">
+                        <p class="card-text">Fourth step</p>
+                        <h4 class="card-title" style="font-weight: normal;"><strong>Results</strong></h4>
+                        <p class="card-text">A global template defines the solution blueprint of the global ERP solution. It provides the basic information on the standard processes</p>
+                        <div style="width: 20px;height: 2.5px;background-color: rgb(37,224,203);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="padding-top: 30px;">
+        <div class="container">
+            <h1 style="color: rgb(0,0,0);border-bottom: 3px solid black;font-family: ABeeZee, sans-serif;margin-bottom: 30px;padding-bottom: 7px;">Solutions we offer</h1>
+            <div class="row">
+                <div class="col" style="padding-top: 50px;background-image: url(&quot;{% static 'img/photo-of-person-holding-mobile-phone-3183153.jpg' %} &quot;);background-repeat: no-repeat;background-size: cover;padding-right: 60px;padding-left: 75px;">
+                    <div class="solutionweoffer">
+                        <div class="card-group" >
+                            <div class="card" style="background-color: rgba(255,255,255,0.82);">
+                                <div class="card-body">
+                                    <h4 class="card-title">S/4 HANA</h4>
+                                    <p class="card-text">Get an overview of services for SAP S/4HANA and discover how we can help you address key aspects of your project, enforce best practices, and set up your own operations for ongoing success.</p><a class="btn btn-primary"
+                                        role="button" style="background-color: rgb(69,176,238);border: 0px!important;color: rgb(255,255,255);" href="{% url 'solutions-sap-hana' %}">KNOW MORE</a></div>
+                            </div>
+                            <div class="card" style="background-color: rgba(255,255,255,0.82);">
+                                <div class="card-body">
+                                    <h4 class="card-title">SAP ANALYTICS</h4>
+                                    <p class="card-text">SAP Analytics Cloud lays the foundation for fast, modular use, and can grow alongside your business. As a true cloud solution, SAP Analytics Cloud is convenient, secure, and scales to meet the needs of businesses of
+                                        any size.</p><a class="btn btn-primary" role="button" style="background-color: rgb(69,176,238);border-color: rgb(69,176,238);" href="{% url 'solutions-sap-analytics' %}">KNOW MORE</a></div>
+                            </div>
+                            <div class="card" style="background-color: rgba(255,255,255,0.82);">
+                                <div class="card-body">
+                                    <h4 class="card-title">SAP MIGRATION SERVICES</h4>
+                                    <p class="card-text">SAP S/4HANA is the digital core platform which develops the enterprise business to take benefits of all advances technologies like in memory platform, improved end user experience, simplified IT landscape, Internet of Things (IoT), real-time analytics, mobility, big data and many more next generation technologies.</p><a class="btn btn-primary" role="button" style="background-color: rgb(69,176,238);border-color: rgb(69,176,238);" href="{% url 'solutions-sap-migrations' %}">KNOW MORE</a></div>
+                            </div>
+                            <div class="card" style="background-color: rgba(255,255,255,0.82);">
+                                <div class="card-body">
+                                    <h4 class="card-title">SAP MOBILITY/FIORI</h4>
+                                    <p class="card-text">With Standard & Customize Fiori APP Client can access the Right information and Develop Key Internal Control Points .We Provide Wide range of services for Fiori<br></p><a class="btn btn-primary" role="button" style="background-color: rgb(69,176,238);border-color: rgb(69,176,238);" href="{% url 'solutions-sap-mobility' %}">KNOW MORE</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section style="padding-top: 0px;">
+  <style>
+    @-webkit-keyframes scroll {
+0% {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+100% {
+  -webkit-transform: translateX(calc(-250px * 17));
+          transform: translateX(calc(-250px * 17));
+}
+}
+@keyframes scroll {
+0% {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+100% {
+  -webkit-transform: translateX(calc(-250px * 17));
+          transform: translateX(calc(-250px * 17));
+}
+}
+.slider {
+background: white;
+box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+height: 200px;
+margin: auto;
+overflow: hidden;
+position: relative;
+width: 100%;
+}
+.slider::before, .slider::after {
+background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+content: "";
+height: 200px;
+position: absolute;
+width: 200px;
+z-index: 2;
+}
+.slider::after {
+right: 0;
+top: 0;
+-webkit-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+}
+.slider::before {
+left: 0;
+top: 0;
+}
+.slider .slide-track {
+-webkit-animation: scroll 40s linear infinite;
+        animation: scroll 40s linear infinite;
+display: -webkit-box;
+display: flex;
+width: calc(250px * 14);
+}
+.slider .slide {
+height: 200px;
+width: 250px;
+margin-right: 40px;
+margin-left: 40px;
+}
+
+
+  </style>
+    <div class="container">
+      <h1 style="color: rgb(0,0,0);border-bottom: 3px solid black;font-family: ABeeZee, sans-serif;margin-bottom: 30px;padding-bottom: 7px;">Our clients</h1>    
+    <br>
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/Official_logo_of_Piramal_Enterprises_and_Group.svg" height="100" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/deesan.png" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/cooperstandard.png" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/Gujarat-Heavy-Chemicals-Ltd.jpg" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/client-shree-mahavir-metal.jpg" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/MAHA.jpg" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/go.png" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/tata.jpg" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/alkyl.jpeg" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/tk.png" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/mt.png" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/Sterling-Wilson.jpg" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/kirloskar-logo-92C38BA575-seeklogo.com.png" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/zensar.jpeg" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/GT.png" height="200" width="250" alt="" />
+        </div>
+        <div class="slide">
+          <img src="http://expoundtechnivo.com/static/clients/IS.png" height="200" width="250" alt="" />
+        </div>
+      </div>
+    </div>
+    <hr>   
+    
+</section>
+    
+    <!--  
+    <section id="chat" class="bg-primary text-white mb-0" style="background-color: rgb(245,245,245)!important;padding-top: 0px;">
+        <h1 style="color: rgb(0,0,0);text-align: center;padding-bottom: 20px;padding-top: 20px;">We're at your Service</h1>
+        <div class="container border rounded-0" style="border-width: 0px!important;background-color: #ffffff;">
+    <div class="row rounded-lg overflow-hidden shadow">
+    
+    <div class="col-5 px-0">
+      <div class="bg-white">
+
+        <div class="bg-gray px-4 py-2 bg-light">
+          <p class="h5 mb-0 py-1" style="color:black">Recent</p>
+        </div>
+
+        <div class="messages-box" style="background-color:rgb(1,105,188) border: 1px solid black!important">
+          <div class="list-group rounded-0" style="background-color:rgb(1,105,188)">
+            <a class="list-group-item list-group-item-action active text-white rounded-0" style="background-color:#66b1ed">
+              <div class="media"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
+                <div class="media-body ml-4" style="background-color:#66b1ed">
+                  <div class="d-flex align-items-center justify-content-between mb-1">
+                    <h6 class="mb-0">Jason Doe</h6><small class="small font-weight-bold">25 Dec</small>
+                  </div>
+                  <p class="font-italic mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
+              <div class="media"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
+                <div class="media-body ml-4">
+                  <div class="d-flex align-items-center justify-content-between mb-1">
+                    <h6 class="mb-0">Jason Doe</h6><small class="small font-weight-bold">14 Dec</small>
+                  </div>
+                  <p class="font-italic text-muted mb-0 text-small">Lorem ipsum dolor sit amet, consectetur. incididunt ut labore.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
+              <div class="media"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
+                <div class="media-body ml-4">
+                  <div class="d-flex align-items-center justify-content-between mb-1">
+                    <h6 class="mb-0">Jason Doe</h6><small class="small font-weight-bold">9 Nov</small>
+                  </div>
+                  <p class="font-italic text-muted mb-0 text-small">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
+              <div class="media"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
+                <div class="media-body ml-4">
+                  <div class="d-flex align-items-center justify-content-between mb-1">
+                    <h6 class="mb-0">Jason Doe</h6><small class="small font-weight-bold">18 Oct</small>
+                  </div>
+                  <p class="font-italic text-muted mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
+              <div class="media"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
+                <div class="media-body ml-4">
+                  <div class="d-flex align-items-center justify-content-between mb-1">
+                    <h6 class="mb-0">Jason Doe</h6><small class="small font-weight-bold">17 Oct</small>
+                  </div>
+                  <p class="font-italic text-muted mb-0 text-small">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
+              <div class="media"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
+                <div class="media-body ml-4">
+                  <div class="d-flex align-items-center justify-content-between mb-1">
+                    <h6 class="mb-0">Jason Doe</h6><small class="small font-weight-bold">2 Sep</small>
+                  </div>
+                  <p class="font-italic text-muted mb-0 text-small">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
+              <div class="media"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
+                <div class="media-body ml-4">
+                  <div class="d-flex align-items-center justify-content-between mb-1">
+                    <h6 class="mb-0">Jason Doe</h6><small class="small font-weight-bold">30 Aug</small>
+                  </div>
+                  <p class="font-italic text-muted mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action list-group-item-light rounded-0">
+              <div class="media"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
+                <div class="media-body ml-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h6 class="mb-0">Jason Doe</h6><small class="small font-weight-bold">21 Aug</small>
+                  </div>
+                  <p class="font-italic text-muted mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <!--Chat Box
+    <div class="col-7 px-0" style="border: 1px solid rgb(248,249,250)!important">
+      <div class="px-4 py-5 chat-box bg-white">-->
+        <!-- Sender Message 
+        <div class="media w-50 mb-3"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
+          <div class="media-body ml-3">
+            <div class="bg-light rounded py-2 px-3 mb-2">
+              <p class="text-small mb-0 text-muted">Test which is a new approach all solutions</p>
+            </div>
+            <p class="small text-muted">12:00 PM | Aug 13</p>
+          </div>
+        </div>
+        -->
+        <!-- Reciever Message-->
+        <!-- 
+        <div class="media w-50 ml-auto mb-3">
+          <div class="media-body">
+            <div class="rounded py-2 px-3 mb-2" style="background-color:#66b1ed">
+              <p class="text-small mb-0 text-white">Test which is a new approach to have all solutions</p>
+            </div>
+            <p class="small text-muted">12:00 PM | Aug 13</p>
+          </div>
+        </div>
+ -->
+        <!-- Sender Message-->
+        <!-- 
+        <div class="media w-50 mb-3"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
+          <div class="media-body ml-3">
+            <div class="bg-light rounded py-2 px-3 mb-2">
+              <p class="text-small mb-0 text-muted">Test, which is a new approach to have</p>
+            </div>
+            <p class="small text-muted">12:00 PM | Aug 13</p>
+          </div>
+        </div>
+ -->
+        <!-- Reciever Message-->
+        <!-- 
+        <div class="media w-50 ml-auto mb-3">
+          <div class="media-body">
+            <div class="rounded py-2 px-3 mb-2" style="background-color:#66b1ed">
+              <p class="text-small mb-0 text-white">Apollo University, Delhi, India Test</p>
+            </div>
+            <p class="small text-muted">12:00 PM | Aug 13</p>
+          </div>
+        </div>
+ -->
+        <!-- Sender Message-->
+        <!-- 
+        <div class="media w-50 mb-3"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
+          <div class="media-body ml-3">
+            <div class="bg-light rounded py-2 px-3 mb-2">
+              <p class="text-small mb-0 text-muted">Test, which is a new approach</p>
+            </div>
+            <p class="small text-muted">12:00 PM | Aug 13</p>
+          </div>
+        </div>
+ -->
+        <!-- Reciever Message-->
+        <!-- 
+        <div class="media w-50 ml-auto mb-3">
+          <div class="media-body">
+            <div class="rounded py-2 px-3 mb-2" style="background-color:#66b1ed">
+              <p class="text-small mb-0 text-white">Apollo University, Delhi, India Test</p>
+            </div>
+            <p class="small text-muted">12:00 PM | Aug 13</p>
+          </div>
+        </div>
+
+      </div>
+ -->
+      <!-- Typing area -->
+      <!-- 
+      <form action="#" class="bg-light">
+        <div class="input-group">
+          <input type="text" placeholder="Type a message" aria-describedby="button-addon2" class="form-control rounded-0 border-0 py-4 bg-light">
+          <div class="input-group-append">
+            <button id="button-addon2" type="submit" class="btn btn-link"> <i class="fa fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+</div>
+</section>
+-->
+{% endblock %}

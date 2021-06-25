@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expound Technivo || Home</title>
+    <link rel="icon" href="https://expoundtechnivo.com/logo_icon.png">
+    <link rel="icon" href="{% static "img/logo_icon_96.png" %}" sizes="90x96">
+    <!-- Css and font loaded -->
+    <link rel="stylesheet" href=" {% static "bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
+    <link rel="stylesheet" href=" {% static "fonts/fontawesome-all.min.css" %}">
+    <link rel="stylesheet" href=" {% static "fonts/font-awesome.min.css" %}">
+    <link rel="stylesheet" href=" {% static "fonts/line-awesome.min.css" %}">
+    <link rel="stylesheet" href=" {% static "fonts/simple-line-icons.min.css" %}">
+    <link rel="stylesheet" href=" {% static "fonts/fontawesome5-overrides.min.css" %}">
+    <link rel="stylesheet" href=" {% static "css/best-carousel-slide.css" %}">
+    <link rel="stylesheet" href=" {% static "css/Bootstrap-Chat.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href=" {% static "css/main.css" %}">
+    <link rel="stylesheet" href=" {% static "css/Mockup-iMac.css" %}">
+    <!-- Css and font loaded -->
+</head>
+<body id="page-top" style="text-align: center;">
+    <!-- navbar starts -->
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav" style="background-color: rgb(255,255,255)!important;color: rgb(0,0,0);box-shadow: 0px 2px rgb(245,245,245);opacity: 0.87;">
+        <div class="container"><a class="navbar-brand" href="{% url 'homepage' %}" style="color: rgb(0,0,0);"><img src="{% static 'img/updated_logo.png' %}" style="width: 150px;height: 50px;"></a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: rgb(18,143,118);background-color: rgb(255,255,255)!important;font-size: 15px;border-width: 0px;"><i class="fa fa-bars" style="color: rgb(18,143,118);"></i></button>
+            <div
+                class="collapse navbar-collapse" id="navbarResponsive" style="color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-weight: normal;">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1" role="presentation" style="color: rgb(0,0,0);"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'aboutpage' %}" style="color: rgb(0,0,0);">About</a></li>
+                    <li class="nav-item dropdown" style="padding-top: 8px;"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(0,0,0);">Solutions&nbsp;</a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="{% url 'solutions-sap-hana' %}">S/4 HANA</a><a class="dropdown-item" role="presentation" href="{% url 'solutions-sap-analytics' %}">SAp analytics</a><a class="dropdown-item" role="presentation"
+                                href="{% url 'solutions-sap-migrations' %}">SAp migration services</a><a class="dropdown-item" role="presentation" href="{% url 'solutions-sap-mobility' %}">SAP MOBILITY/FIORI</a></div>
+                    </li>
+                    <li class="nav-item dropdown" style="padding-top: 8px;"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(0,0,0);">services&nbsp;</a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="{% url 'services-sap-consulting' %}">sap consulting</a><a class="dropdown-item" role="presentation" href="{% url 'services-corporate-training' %}">corporate training</a><a class="dropdown-item"
+                                role="presentation" href="{% url 'services-professional-services' %}">professional services</a><a class="dropdown-item" role="presentation" href="{% url 'services-program-management' %}">program management</a><a class="dropdown-item"
+                                role="presentation" href="{% url 'services-center-of-excellence' %}">center of excellence</a></div>
+                    </li>
+                    <li class="nav-item dropdown" style="padding-top: 8px;"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(0,0,0);">industries</a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="{% url 'discrete-manufacturing' %}">discrete manufacturing</a><a class="dropdown-item" role="presentation" href="{% url 'process-industry' %}">process industry</a></div>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'career' %}" style="color: rgb(0,0,0);">CAreer</a></li>
+                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'contact' %}" style="color: rgb(0,0,0);">Contact</a></li>
+                    {% if user.is_authenticated %} 
+                    <li class="nav-item dropdown" style="padding-top: 8px;"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(0,0,0);"> Welcome, {{ user.username }}&nbsp;</a>
+                        <div class="dropdown-menu" role="menu"><!--<a class="dropdown-item" role="presentation" href="{% url 'account_login' %}">Login</a><a class="dropdown-item" role="presentation" href="{% url 'services-corporate-training' %}">corporate training</a><a class="dropdown-item"
+                                role="presentation" href="{% url 'services-professional-services' %}">professional services</a><a class="dropdown-item" role="presentation" href="{% url 'services-program-management' %}">program management</a>-->
+                                <a class="dropdown-item" role="presentation" href="{% url 'userprofile:dashboard' %}">Expound Portal</a>
+                                <a class="dropdown-item"
+                                role="presentation" href="{% url 'account_logout' %}">Logout</a></div>
+                    </li>
+                    {% else  %}
+                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'account_login' %}" style="color: rgb(0,0,0);">Login</a></li>
+                    {% endif %}
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <!-- navbar ends -->
+    
+    {% block content %}
+
+    {% endblock %}
+    <!-- footer starts -->
+    <footer class="footer text-center" style="background-color: rgb(60,80,90);background-size: cover;background-repeat: no-repeat;background-position: center;padding-bottom: 2px;">
+        <div class="container" style="background-color: rgba(255,255,255,0);">
+            <div class="row">
+                <div class="col-md-4 col-xl-5"><img src="{% static 'img/updated_logo_white.png' %}" style="width: 150px;height: 50px;">
+                    <hr style="height: 2px;background-color: #ffffff;">
+                    <p class="lead mb-0"><span style="font-style: normal;font-weight: normal;font-family: ABeeZee, sans-serif;">Contact&nbsp;</span></p><span style="font-weight: bold;">hr@expoundtechnivo.com</span>
+                    <p class="lead mb-0"><span style="font-style: normal;font-weight: normal;font-family: ABeeZee, sans-serif;font-size: 15px;"><a href="{% url 'contact' %}">Click here to send us a hi !<br></a></span></p>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle" role="button" href="https://in.linkedin.com/company/expound-technivo-pvt-ltd?trk=public_profile_topcard_current_company"><i class="fa fa-linkedin-square fa-fw"></i></a></li>
+                        <li class="list-inline-item"></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle" role="button" href="#"><i class="icon-login fa-fw"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-xl-2 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase" style="font-size: 20px;color: rgb(255,255,255);font-family: ABeeZee, sans-serif;">Solutions</h4>
+                    <p><span><a href="{% url 'solutions-sap-hana' %}" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;">S/4 HANA</a></span></p>
+                    <p><span><a href="{% url 'solutions-sap-analytics' %}" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;">SAP ANALYTICS</a></span></p>
+                    <p><span><a href="{% url 'solutions-sap-migrations' %}" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;">SAP MIGRATION SERVICES</a></span></p>
+                    <p><span><a href="{% url 'solutions-sap-mobility' %}" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;">SAP MOBILITY/FIORI</a></span></p>
+                </div>
+                <div class="col-md-4 col-xl-2 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase" style="font-size: 20px;color: rgb(255,255,255);font-family: ABeeZee, sans-serif;">Services</h4>
+                    <p><span><a href="{% url 'services-sap-consulting' %}" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;">SAP Consulting</a></span></p>
+                    <p><span><a href="{% url 'services-corporate-training' %}" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;">Corporate Training</a></span></p>
+                    <p><span><a href="{% url 'services-professional-services' %}" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;">Professional Services</a></span></p>
+                    <p><span><a href="{% url 'services-program-management' %}" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;font-size: 15px;">Program Management</a></span></p>
+                    <p><span><a href="{% url 'services-center-of-excellence' %}" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;font-size: 15px;">Center of Excellence</a></span></p>
+                </div>
+                <div class="col-xl-2">
+                    <h4 class="text-uppercase" style="font-size: 20px;font-family: ABeeZee, sans-serif;">Quick Links</h4>
+                    <p><span><a href="https://mail.expoundtechnivo.com" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;">Expound Mail system</a></span></p>
+                    <p><span><a href="{% url 'homepage' %}" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;">Home Page</a></span></p>
+                    <p><span><a href="{% url 'aboutpage' %}" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;">About Us</a></span></p>
+                    <p><span><a href="{% url 'contact' %}" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;">Contact</a></span></p>
+                    <p><span><a href="{% url 'career' %}" style="color: rgb(222,222,222);font-family: ABeeZee, sans-serif;">Career</a></span></p>
+                </div>
+            </div>
+            <hr style="background-color: #ffffff;">
+            <p class="text-left" style="font-size: 13px;">Copyright EXPOUND TECHNIVO PVT LTD<br>© 2020. All rights reserved.</p>
+            <p class="text-left" style="font-size: 10px;margin-bottom: 0px;">Special thanks and credits to the respective designers who created the images used. Please contact us if you want any image taken down.</p>
+            <p class="text-left" style="font-size: 10px;">"Icons used are from&nbsp;<a href="http://www.flaticon.com/">www.flaticon.com</a>" &nbsp;and credits given to the following creator.</p>
+        </div>
+    </footer>
+    <!-- footer ends -->
+    <!-- script linked -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/chart.min.js' %}"></script>
+    <script src="{% static 'js/bs-init.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{% static 'js/freelancer.js' %}"></script>
+    <script src="{% static 'js/dropdown.js' %}"></script>
+    <!-- script linked -->
+</body>
+</html>
