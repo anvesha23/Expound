@@ -24,46 +24,115 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href=" {% static "css/main.css" %}">
     <link rel="stylesheet" href=" {% static "css/Mockup-iMac.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Css and font loaded -->
 </head>
 <body id="page-top" style="text-align: center;">
+    <style>
+        .topnavitems{
+            padding-left: 5px;
+            
+            margin-left: 15px;
+            
+            color: white;
+            text-decoration: none;
+            font-size: 0.75em;
+        }
+        .topnavitems:hover{
+            text-decoration-line: none;
+            color:black;
+        }
+        li.dropdown:last-child .dropdown-menu {
+            right: 0;
+            left: auto;
+            }
+         
+            
+    </style>
+    
+    <div class="sticky-top" style="background-color:white;opacity: 1;margin-right: 0px;margin-left: 0px;">
+        <div class="text-uppercase" style=" background-color:#3c505a;">
+           <div class="container"style="text-align: end; padding-top: 3px; padding-bottom: 3px;">
+               <span > <a class="topnavitems" href="{% url 'career' %}">Career</a></span>
+               <span > <a class="topnavitems" href="{% url 'contact' %}">Contact</a></span>
+               <span>{% if user.is_authenticated %} 
+                   <!--<a class="dropdown-item" role="presentation" href="{% url 'account_login' %}">Login</a><a class="dropdown-item" role="presentation" href="{% url 'services-corporate-training' %}">corporate training</a><a class="dropdown-item"
+                            role="presentation" href="{% url 'services-professional-services' %}">professional services</a><a class="dropdown-item" role="presentation" href="{% url 'services-program-management' %}">program management</a>-->
+                          <span ><a class="topnavitems" href="{% url 'userprofile:dashboard' %}">Expound Portal</a></span>  
+                           <span><a class="topnavitems" href="{% url 'account_logout' %}">Logout</a></span>  
+               
+                {% else  %}
+                <a class="topnavitems" style="margin-right: 10px;" href="{% url 'account_login' %}">Login</a>
+                {% endif %}</span>
+            </div>
+         </div>
+
+    
+
     <!-- navbar starts -->
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav" style="background-color: rgb(255,255,255)!important;color: rgb(0,0,0);box-shadow: 0px 2px rgb(245,245,245);opacity: 0.87;">
-        <div class="container"><a class="navbar-brand" href="{% url 'homepage' %}" style="color: rgb(0,0,0);"><img src="{% static 'img/updated_logo.png' %}" style="width: 150px;height: 50px;"></a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color: rgb(18,143,118);background-color: rgb(255,255,255)!important;font-size: 15px;border-width: 0px;"><i class="fa fa-bars" style="color: rgb(18,143,118);"></i></button>
-            <div
-                class="collapse navbar-collapse" id="navbarResponsive" style="color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-weight: normal;">
+    <nav class="navbar navbar-light navbar-expand-lg bg-secondary text-uppercase" id="mainNav" style="background-color: rgb(255,255,255)!important;color: rgb(0,0,0);box-shadow: 0px 2px rgb(245,245,245);opacity:1; padding-top: 0; padding-bottom: 0;">
+        <div class="container"><a class="navbar-brand" href="{% url 'homepage' %}" style="color: rgb(0,0,0);"><img src="{% static 'img/updated_logo.png' %}" style="width: 150px;height: 50px;"></a>
+            <button data-toggle="collapse"  data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="margin-left: auto; color: rgb(18,143,118);background-color: rgb(255,255,255)!important;font-size: 15px;border-width: 0px;"><i class="fa fa-bars" style="color: rgb(18,143,118);"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive" style="color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-weight: normal;">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item mx-0 mx-lg-1" role="presentation" style="color: rgb(0,0,0);"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'aboutpage' %}" style="color: rgb(0,0,0);">About</a></li>
-                    <li class="nav-item dropdown" style="padding-top: 8px;"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(0,0,0);">Solutions&nbsp;</a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="{% url 'solutions-sap-hana' %}">S/4 HANA</a><a class="dropdown-item" role="presentation" href="{% url 'solutions-sap-analytics' %}">SAp analytics</a><a class="dropdown-item" role="presentation"
-                                href="{% url 'solutions-sap-migrations' %}">SAp migration services</a><a class="dropdown-item" role="presentation" href="{% url 'solutions-sap-mobility' %}">SAP MOBILITY/FIORI</a></div>
+                    <li class="nav-item dropdown" style="padding-top: 8px;position:static;">
+                        <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(0,0,0);">Solutions&nbsp;</a>
+                        <div class="dropdown-menu" role="menu" style="width:100%!important; margin-top: 0!important;">
+                            <div class="row">
+                                <div class="col">
+                                   <ul>
+                                        <a class="dropdown-item" role="presentation" href="{% url 'solutions-sap-hana' %}">S/4 HANA</a>
+                                        <a class="dropdown-item" role="presentation" href="{% url 'solutions-sap-analytics' %}">SAp analytics</a>
+                                        <a class="dropdown-item" role="presentation" href="{% url 'solutions-sap-migrations' %}">SAp migration services</a>
+                                        <a class="dropdown-item" role="presentation" href="{% url 'solutions-sap-mobility' %}">SAP MOBILITY/FIORI</a>                 
+                                   </ul>
+                                </div>
+                                <div class="col">
+                                   <ul>
+                                    <a class="dropdown-item" role="presentation" href="{% url 'services-sap-consulting' %}">sap consulting</a>
+                                    <a class="dropdown-item" role="presentation" href="{% url 'services-corporate-training' %}">corporate training</a>
+                                    <a class="dropdown-item" role="presentation" href="{% url 'services-professional-services' %}">professional services</a>
+                                    <a class="dropdown-item" role="presentation" href="{% url 'services-program-management' %}">program management</a>
+                                    <a class="dropdown-item" role="presentation" href="{% url 'services-center-of-excellence' %}">center of excellence</a>
+                                   </ul>
+                                </div>
+                                <div class="col">
+                                   <ul>
+                                    <a class="dropdown-item" role="presentation" href="{% url 'discrete-manufacturing' %}">discrete manufacturing</a>
+                                    <a class="dropdown-item" role="presentation" href="{% url 'process-industry' %}">process industry</a>
+                                   </ul>
+                                </div>
+                                <div class="col">
+
+                                </div>
+                            </div>
+                            
+                        </div>
                     </li>
                     <li class="nav-item dropdown" style="padding-top: 8px;"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(0,0,0);">services&nbsp;</a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="{% url 'services-sap-consulting' %}">sap consulting</a><a class="dropdown-item" role="presentation" href="{% url 'services-corporate-training' %}">corporate training</a><a class="dropdown-item"
-                                role="presentation" href="{% url 'services-professional-services' %}">professional services</a><a class="dropdown-item" role="presentation" href="{% url 'services-program-management' %}">program management</a><a class="dropdown-item"
-                                role="presentation" href="{% url 'services-center-of-excellence' %}">center of excellence</a></div>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" role="presentation" href="{% url 'services-sap-consulting' %}">sap consulting</a>
+                            <a class="dropdown-item" role="presentation" href="{% url 'services-corporate-training' %}">corporate training</a>
+                            <a class="dropdown-item" role="presentation" href="{% url 'services-professional-services' %}">professional services</a>
+                            <a class="dropdown-item" role="presentation" href="{% url 'services-program-management' %}">program management</a>
+                            <a class="dropdown-item" role="presentation" href="{% url 'services-center-of-excellence' %}">center of excellence</a>
+                        </div>
                     </li>
-                    <li class="nav-item dropdown" style="padding-top: 8px;"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(0,0,0);">industries</a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="{% url 'discrete-manufacturing' %}">discrete manufacturing</a><a class="dropdown-item" role="presentation" href="{% url 'process-industry' %}">process industry</a></div>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'career' %}" style="color: rgb(0,0,0);">CAreer</a></li>
-                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'contact' %}" style="color: rgb(0,0,0);">Contact</a></li>
-                    {% if user.is_authenticated %} 
-                    <li class="nav-item dropdown" style="padding-top: 8px;"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(0,0,0);"> Welcome, {{ user.username }}&nbsp;</a>
-                        <div class="dropdown-menu" role="menu"><!--<a class="dropdown-item" role="presentation" href="{% url 'account_login' %}">Login</a><a class="dropdown-item" role="presentation" href="{% url 'services-corporate-training' %}">corporate training</a><a class="dropdown-item"
-                                role="presentation" href="{% url 'services-professional-services' %}">professional services</a><a class="dropdown-item" role="presentation" href="{% url 'services-program-management' %}">program management</a>-->
-                                <a class="dropdown-item" role="presentation" href="{% url 'userprofile:dashboard' %}">Expound Portal</a>
-                                <a class="dropdown-item"
-                                role="presentation" href="{% url 'account_logout' %}">Logout</a></div>
-                    </li>
-                    {% else  %}
-                    <li class="nav-item mx-0 mx-lg-1" role="presentation"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'account_login' %}" style="color: rgb(0,0,0);">Login</a></li>
-                    {% endif %}
+                    <li class="nav-item dropdown" style="padding-top: 8px;">
+                        <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="color: rgb(0,0,0);">industries</a>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" role="presentation" href="{% url 'discrete-manufacturing' %}">discrete manufacturing</a>
+                            <a class="dropdown-item" role="presentation" href="{% url 'process-industry' %}">process industry</a>
+                        </div>
+                    </li>         
+
                 </ul>
         </div>
         </div>
     </nav>
+    </div>
     <!-- navbar ends -->
     
     {% block content %}
