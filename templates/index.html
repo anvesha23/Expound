@@ -2,57 +2,55 @@
 {% load static %}
 {% block content %}
     <!-- for solutions we offer mobile view  -->
-
     <style>
         @media (min-width: 700px) {
               .solutionweoffer {
                   margin-bottom: 50px;
                   margin-top: 260px!important ;
                 }
-        }  
+              }
+        /* .card-container{
+          display: inline;
+        } */
         .card{
-          width:30%;
+          width: 30%;
           display: inline-flex;
-          /* margin: 20px; */
           transition-duration: 1s;
-          
-        } 
-        .card:hover{
+        }
+        .card-popup:hover{
+          background-color:rgb(120, 128, 149);
           width:39%;
-          
-         
-          transition-duration:1s;
-         
-        }
-        .card1::after{
-          width:100%;
-          
           height:50%;
-          opacity:0;
-          /* transition-duration:3s; */
+          transition-duration: 1s;
         }
-        .card1:hover::after{
-          content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem fringilla ut morbi tincidunt augue. Non consectetur a erat nam at lectus.";
-          opacity :1;
-          transition-duration: 3s;
-          
+        .card-popup::after{
+          width: 100%;
+          height: 50%;
+          transition: 3s;
+          background-color: rgb(54, 51, 51);
+          color: white;
+          content: "hello world!!!!sfiuydgi wafd rgbi uku aub raesu fgi  ubrf iubufa  taukgh fgiua auerhfi uhfiujubfiu  ";
+          opacity: 0;
+        }
+        .card-popup:hover::after{
+          opacity: 1;
+          transition-duration: 1s;
         }
     </style>
-
     <!-- for solutions we offer mobile view  -->
 
     <section class="bg-primary text-white mb-0" style="background-image: url(&quot;{% static 'img/austin-distel-wawEfYdpkag-unsplash.jpg' %}&quot;);background-size: cover;background-position: 50%;background-repeat: no-repeat;opacity: 1;margin-top: 5px;background-color: rgba(255,255,255,0)!important;filter: invert(0%);">
         <div class="container border rounded-0" style="border: none!important;">
             <div class="row" style="border: none!important;">
                 <div class="col-xl-6 offset-xl-0" style="opacity: 0;"></div>
-                <div class="col-lg-4 col-xl-5 text-center mr-auto" style="padding-bottom: 41px;background-color: rgba(255,255,255,1);opacity: 0.8;border: solid;color: rgb(255,255,255);">
+                <div class="col-lg-4 col-xl-5 text-center mr-auto" style="padding-bottom: 41px;background-color: rgba(255,255,255,0.8);opacity: 1;border: solid;color: rgb(255,255,255);">
                     <h2 class="text-uppercase text-center text-white" style="color: rgb(0,0,0)!important;padding-top: 50px;font-size: 50px;text-transform: none!important;font-family: ABeeZee, sans-serif;">We at Expound</h2>
                     <p class="lead" style="color: rgb(0,0,0);padding-left: 30px;background-color: rgba(152,152,152,0);font-family: ABeeZee,;">A full service provider of SAP solutions, we offer our customers a broad range of SAP consulting and support services.</p><a class="btn btn-outline-light btn-xl" role="button" id="landing-img-button" href="{% url 'contact' %}" style="color: rgb(7,11,8);border-color: rgb(45,80,112);margin-top: 10px;background-color: rgba(248,249,250,0.38);"><span>Get in touch &gt;</span></a></div>
             </div>
         </div>
     </section>
     <header class="masthead bg-primary text-white text-center" style="background-color: rgb(255,255,255)!important;padding-top: 30px;padding-bottom: 30px;">
-        <h1 class="mb-5 animate__animated animate__fadeIn" style="font-size: 30px;font-weight: bold;color: rgb(0,0,0);margin-bottom: 10px!important;font-family: ABeeZee, sans-serif;"><strong>Global Capabilities, Local Excellence.</strong></h1>
+        <h1 class="mb-5" style="font-size: 30px;font-weight: bold;color: rgb(0,0,0);margin-bottom: 10px!important;font-family: ABeeZee, sans-serif;"><strong>Global Capabilities, Local Excellence.</strong></h1>
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-lg-7 col-xl-4">
@@ -72,83 +70,84 @@
             </div>
         </div>
     </header>
-    <section style="padding-top: 0px;">
-      <div class="container" style="border-top: 1px solid rgb(224,224,224);padding-top: 40px;">
-          <h1 id="service-offering-heading" style="font-family: ABeeZee, sans-serif;color: rgb(91,91,91);">Service Offerings</h1>
-       
-              <div class="card card1" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
-                  <div class="card-body">
-                      <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-sap-consulting' %}"><i class="la la-cubes" style="color: rgb(69,176,238);"></i></a></h4>
-                      <h4 class="card-title" id="service-offering-heading"><a href="{% url 'services-sap-consulting' %}" style="color: rgb(91,91,91);font-family: ABeeZee, sans-serif;font-weight: normal;">SAP Consulting</a></h4>
-                  </div>
-              </div>
-              <div class="card card2" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
-                  <div class="card-body">
-                      <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-corporate-training' %}"><i class="la la-industry" style="color: rgb(69,176,238);"></i></a></h4>
-                      <h4 class="card-title" id="service-offering-heading"><a href="{% url 'services-corporate-training' %}" style="font-family: ABeeZee, sans-serif;font-weight: normal;color: rgb(91,91,91);">Corporate Training</a></h4>
-                  </div>
-              </div>
-              <div class="card card3" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
-                  <div class="card-body">
-                      <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-professional-services' %}"><i class="la la-suitcase" style="color: rgb(69,176,238);"></i></a></h4>
-                      <h4 class="card-title" id="service-offering-heading" style="text-align: center;"><a href="{% url 'services-professional-services' %}" style="font-family: ABeeZee, sans-serif;color: rgb(91,91,91);font-weight: normal;">Professional Services</a></h4>
-                  </div>
-              </div>
-              <div class="card card4" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
-                  <div class="card-body">
-                      <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-program-management' %}"><i class="fas fa-people-carry" style="color: rgb(69,176,238);"></i></a></h4>
-                      <h4 class="card-title" id="service-offering-heading" style="text-align: center;color: rgb(91,91,91);font-weight: normal;font-family: ABeeZee, sans-serif;"><a href="{% url 'services-program-management' %}" style="color: rgb(91,91,91);font-weight: normal;font-family: ABeeZee, sans-serif;">Program Management</a></h4>
-                  </div>
-              </div>
-              <div class="card card5" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
-                  <div class="card-body">
-                      <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-center-of-excellence' %}"><i class="la la-globe" style="color: rgb(69,176,238);"></i></a></h4>
-                      <h4 class="card-title" id="service-offering-heading" style="font-family: ABeeZee, sans-serif;color: rgb(91,91,91);"><a href="{% url 'services-center-of-excellence' %}" style="color: rgb(91,91,91);">Center of Excellence</a></h4>
+      <section style="padding-top: 0px;">
+        <div class="container" style="border-top: 1px solid rgb(224,224,224);padding-top: 40px;">
+            <h1 id="service-offering-heading" style="font-family: ABeeZee, sans-serif;color: rgb(91,91,91);">Service Offerings</h1>
+            <div class="card-container">
+              <div>
+                <div class="card card-popup" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-sap-consulting' %}"><i class="la la-cubes" style="color: rgb(69,176,238);"></i></a></h4>
+                        <h4 class="card-title" id="service-offering-heading"><a href="{% url 'services-sap-consulting' %}" style="color: rgb(91,91,91);font-family: ABeeZee, sans-serif;font-weight: normal;">SAP Consulting</a></h4>
+                    </div>
                 </div>
+                <div class="card card-popup" id="service-offering-heading" style="border-top: 0px;border-bottom: 0px;">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-corporate-training' %}"><i class="la la-industry" style="color: rgb(69,176,238);"></i></a></h4>
+                        <h4 class="card-title" id="service-offering-heading"><a href="{% url 'services-corporate-training' %}" style="font-family: ABeeZee, sans-serif;font-weight: normal;color: rgb(91,91,91);">Corporate Training</a></h4>
+                    </div>
+                </div>
+                <div class="card card-popup" id="service-offering-heading" style="border-bottom: 0px;border-top: 0px;">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-professional-services' %}"><i class="la la-suitcase" style="color: rgb(69,176,238);"></i></a></h4>
+                        <h4 class="card-title" id="service-offering-heading" style="text-align: center;"><a href="{% url 'services-professional-services' %}" style="font-family: ABeeZee, sans-serif;color: rgb(91,91,91);font-weight: normal;">Professional Services</a></h4>
+                    </div>
+                </div>
+              </div>
+              <div>
+                <div class="card card-popup" id="service-offering-heading" style="border-top: 0px;border-bottom: 0px;">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-program-management' %}"><i class="fas fa-people-carry" style="color: rgb(69,176,238);"></i></a></h4>
+                        <h4 class="card-title" id="service-offering-heading" style="text-align: center;color: rgb(91,91,91);font-weight: normal;font-family: ABeeZee, sans-serif;"><a href="{% url 'services-program-management' %}" style="color: rgb(91,91,91);font-weight: normal;font-family: ABeeZee, sans-serif;">Program Management</a></h4>
+                    </div>
+                </div>
+                <div class="card card-popup" id="service-offering-heading" style="border-bottom: 0px;border-top: 0px;border-right: 0px;">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-center-of-excellence' %}"><i class="la la-globe" style="color: rgb(69,176,238);"></i></a></h4>
+                        <h4 class="card-title" id="service-offering-heading" style="font-family: ABeeZee, sans-serif;color: rgb(91,91,91);"><a href="{% url 'services-center-of-excellence' %}" style="color: rgb(91,91,91);">Center of Excellence</a></h4>
+                    </div>
+                </div>
+              </div>
             </div>
-        
-      </div>
-
+        </div>
     </section>
     <section style="background-color: rgb(245,245,245);padding-top: 40px;">
         <h1 style="text-align: center;margin-bottom: 20px;">The Expound Difference !</h1>
         <div class="container border rounded-0" style="padding-top: 15px;background-color: #ffffff;">
-          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2" style="margin-top: 5%;margin-bottom: 5%;">
-            <div class="col align-self-center"><img src="box.png" style="width: 50%;" /></div>
-            <div class="col text-center">
-                <p style="color: rgb(115,115,115);">First Step:</p>
-                <h3 class="text-center text-lg-center text-xl-center" style="margin-top: 3%;">Product</h3>
-                <p class="text-center align-content-lg-start"><br />Our solutions, accelerators, repository, reduce <br />project risks and duration which help in Rapid Implementation with Fast Run Approach.<br /><br /><br /></p>
+            <div class="card-group">
+                <div class="card" style="border-width: 0px;">
+                    <div class="card-body" style="background-image: url(&quot;{% static 'img/0_1.jpg' %}&quot;);background-repeat: no-repeat;text-align: left;">
+                        <p class="card-text">First Step</p>
+                        <h4 class="card-title" style="font-weight: normal;"><strong>Product</strong></h4>
+                        <p class="card-text">Our solutions, accelerators, repository, reduce project risks and duration which help in Rapid Implementation with Fast Run Approach.</p>
+                        <div style="width: 20px;height: 2.5px;background-color: rgb(37,224,203);"></div>
+                    </div>
+                </div>
+                <div class="card" style="border-width: 0px;">
+                    <div class="card-body" style="background-image: url(&quot;{% static 'img/0_2.jpg' %}&quot;);background-repeat: no-repeat;text-align: left;">
+                        <p class="card-text">Second Step</p>
+                        <h4 class="card-title" style="font-weight: normal;"><strong>Process</strong></h4>
+                        <p class="card-text">SAP Business process management tool with activate methodology for implementation, automative support tool to improve service delivery and efficiency.</p>
+                        <div style="width: 20px;height: 2.5px;background-color: rgb(37,224,203);"></div>
+                    </div>
+                </div>
+                <div class="card" style="border-width: 0px;">
+                    <div class="card-body" style="background-image: url(&quot;{% static 'img/0_3.jpg' %}&quot;);background-repeat: no-repeat;text-align: left;">
+                        <p class="card-text">Third step</p>
+                        <h4 class="card-title" style="font-weight: normal;"><strong>Human Capital</strong><br></h4>
+                        <p class="card-text">Human capital refers to the employees Skill, knowledge, experience and their capabilities to deliver stake holders expectations.Therefore we attract, develop and retain the best people.</p>
+                        <div style="width: 20px;height: 2.5px;background-color: rgb(37,224,203);"></div>
+                    </div>
+                </div>
+                <div class="card" style="border-width: 0px;">
+                    <div class="card-body" style="background-image: url(&quot;{% static 'img/0_4.jpg' %}&quot;);background-repeat: no-repeat;text-align: left;">
+                        <p class="card-text">Fourth step</p>
+                        <h4 class="card-title" style="font-weight: normal;"><strong>Results</strong></h4>
+                        <p class="card-text">A global template defines the solution blueprint of the global ERP solution. It provides the basic information on the standard processes</p>
+                        <div style="width: 20px;height: 2.5px;background-color: rgb(37,224,203);"></div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <hr />
-        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2" style="margin-top: 5%;margin-bottom: 5%;">
-            <div class="col order-2 order-lg-1 order-xl-1">
-                <header></header>
-                <p style="color: rgb(115,115,115);">Second Step:</p>
-                <h3 class="text-center" style="margin-top: 3%;">Process</h3>
-                <p class="text-center"><br />SAP Business process management tool with activate methodology for implementation, automative support tool to improve service delivery and efficiency.<br /><br /></p>
-            </div>
-            <div class="col align-self-center order-1 order-lg-2 order-xl-2"><img src="engineering.png" style="width: 50%;" /></div>
-        </div>
-        <hr />
-        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2" style="margin-top: 5%;margin-bottom: 5%;">
-            <div class="col align-self-center"><img src="human-capital.png" style="width: 50%;" /></div>
-            <div class="col">
-                <p style="color: rgb(115,115,115);">Third step:</p>
-                <h3 class="text-center" style="margin-top: 3%;">Human Capital</h3>
-                <p><br />Human capital refers to the employees Skill, knowledge, experience and <br />their capabilities to deliver stake holders expectations.Therefore we <br />attract, develop and retain the best people.<br /><br /></p>
-            </div>
-        </div>
-        <hr />
-        <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2" style="margin-top: 5%;margin-bottom: 5%;">
-            <div class="col order-2 order-lg-1 order-xl-1">
-                <p style="color: rgb(115,115,115);">Fourth Step:</p>
-                <h3 style="margin-top: 3%;">Results</h3>
-                <p><br />A global template defines the solution blueprint of the global ERP <br />solution. It provides the basic information on the standard processes<br /><br /></p>
-            </div>
-            <div class="col align-self-center order-1 order-lg-2 order-xl-2"><img src="stadistics.png" style="width: 50%;" /></div>
-        </div>
         </div>
     </section>
     <section style="padding-top: 30px;">
@@ -253,7 +252,7 @@ margin-left: 40px;
 
   </style>
     <div class="container">
-      <h1 style="color: rgb(0,0,0);border-bottom: 3px solid black;font-family: ABeeZee, sans-serif;margin-bottom: 30px;padding-bottom: 7px;">Our clients</h1>
+      <h1 style="color: rgb(0,0,0);border-bottom: 3px solid black;font-family: ABeeZee, sans-serif;margin-bottom: 30px;padding-bottom: 7px;">Our clients</h1>    
     <br>
     <div class="slider">
       <div class="slide-track">
@@ -307,16 +306,16 @@ margin-left: 40px;
         </div>
       </div>
     </div>
-    <hr>
-
+    <hr>   
+    
 </section>
-
-    <!--
+    
+    <!--  
     <section id="chat" class="bg-primary text-white mb-0" style="background-color: rgb(245,245,245)!important;padding-top: 0px;">
         <h1 style="color: rgb(0,0,0);text-align: center;padding-bottom: 20px;padding-top: 20px;">We're at your Service</h1>
         <div class="container border rounded-0" style="border-width: 0px!important;background-color: #ffffff;">
     <div class="row rounded-lg overflow-hidden shadow">
-
+    
     <div class="col-5 px-0">
       <div class="bg-white">
 
@@ -421,7 +420,7 @@ margin-left: 40px;
     <!--Chat Box
     <div class="col-7 px-0" style="border: 1px solid rgb(248,249,250)!important">
       <div class="px-4 py-5 chat-box bg-white">-->
-        <!-- Sender Message
+        <!-- Sender Message 
         <div class="media w-50 mb-3"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
           <div class="media-body ml-3">
             <div class="bg-light rounded py-2 px-3 mb-2">
@@ -432,7 +431,7 @@ margin-left: 40px;
         </div>
         -->
         <!-- Reciever Message-->
-        <!--
+        <!-- 
         <div class="media w-50 ml-auto mb-3">
           <div class="media-body">
             <div class="rounded py-2 px-3 mb-2" style="background-color:#66b1ed">
@@ -443,7 +442,7 @@ margin-left: 40px;
         </div>
  -->
         <!-- Sender Message-->
-        <!--
+        <!-- 
         <div class="media w-50 mb-3"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
           <div class="media-body ml-3">
             <div class="bg-light rounded py-2 px-3 mb-2">
@@ -454,7 +453,7 @@ margin-left: 40px;
         </div>
  -->
         <!-- Reciever Message-->
-        <!--
+        <!-- 
         <div class="media w-50 ml-auto mb-3">
           <div class="media-body">
             <div class="rounded py-2 px-3 mb-2" style="background-color:#66b1ed">
@@ -465,7 +464,7 @@ margin-left: 40px;
         </div>
  -->
         <!-- Sender Message-->
-        <!--
+        <!-- 
         <div class="media w-50 mb-3"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
           <div class="media-body ml-3">
             <div class="bg-light rounded py-2 px-3 mb-2">
@@ -476,7 +475,7 @@ margin-left: 40px;
         </div>
  -->
         <!-- Reciever Message-->
-        <!--
+        <!-- 
         <div class="media w-50 ml-auto mb-3">
           <div class="media-body">
             <div class="rounded py-2 px-3 mb-2" style="background-color:#66b1ed">
@@ -489,7 +488,7 @@ margin-left: 40px;
       </div>
  -->
       <!-- Typing area -->
-      <!--
+      <!-- 
       <form action="#" class="bg-light">
         <div class="input-group">
           <input type="text" placeholder="Type a message" aria-describedby="button-addon2" class="form-control rounded-0 border-0 py-4 bg-light">
