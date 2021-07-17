@@ -10,14 +10,14 @@
                   margin-top: 260px!important ;
                 }
         }  
-        .card{
+        /* .card-service{
           width:30%;
           display: inline-flex;
-          /* margin: 20px; */
+          margin: 20px; 
           transition-duration: 1s;
           
         } 
-        .card:hover{
+        .card-service:hover{
           width:39%;
           
          
@@ -29,13 +29,26 @@
           
           height:50%;
           opacity:0;
-          /* transition-duration:3s; */
+          transition-duration:3s; 
         }
         .card1:hover::after{
           content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem fringilla ut morbi tincidunt augue. Non consectetur a erat nam at lectus.";
           opacity :1;
           transition-duration: 3s;
           
+        } */
+        .card-hov{
+          background-color: #F9F9F9;
+          transition-duration: 1s;
+          border-radius: 25px;
+
+        }
+        .card-hov:hover{
+          background-color: #fff;
+          transition-duration: 1s;
+          box-shadow: 5px 5px 5px rgb(34, 34, 34);
+          border-radius: 25px;
+          transform: scale(1.1);
         }
     </style>
 
@@ -51,106 +64,161 @@
             </div>
         </div>
     </section>
-    <header class="masthead bg-primary text-white text-center" style="background-color: rgb(255,255,255)!important;padding-top: 30px;padding-bottom: 30px;">
-        <h1 class="mb-5 animate__animated animate__fadeIn" style="font-size: 30px;font-weight: bold;color: rgb(0,0,0);margin-bottom: 10px!important;font-family: ABeeZee, sans-serif;"><strong>Global Capabilities, Local Excellence.</strong></h1>
-        <div class="container h-100">
-            <div class="row h-100">
-                <div class="col-lg-7 col-xl-4">
-                    <div class="text-left mx-auto header-content" style="text-align: center!important;">
-                        <h1 class="mb-5" style="font-size: 30px;font-weight: bold;color: rgb(0,0,0);margin-bottom: 10px!important;text-align: left;">Making your business grow&nbsp;</h1>
-                        <h1 class="mb-5" style="font-size: 20px;font-weight: normal;color: rgb(0,0,0);margin-bottom: 10px!important;text-align: left;">We at expound have something special. We call it The Expound Difference !&nbsp;</h1>
-                        <h1 class="mb-5" style="font-size: 20px;font-weight: normal;color: rgb(0,0,0);margin-bottom: 10px!important;text-align: left;">&nbsp;<a href="{% url 'aboutpage' %}">Know More</a></h1>
-                    </div>
+    
+    <header class="bg-primary text-center" style="background-color: rgb(255,255,255)!important;color: black;padding:30px 0;">
+      <h1 class="text-center"><br><strong>Global Capabilities, Local Excellence.</strong><br><br></h1>
+      <div style="background-color: #3c505a;padding: 0 3%; ">
+        <div class="row ml-auto mr-auto" style="max-width:100%;">
+          <div class="col" style="margin: 30px;padding-right: 0;padding-left: 0;">
+              <div class="card card-hov">
+                  <div class="card-body text-center" data-bs-hover-animate="flash" style="padding-top: 20px;margin: 0px;">
+                      <h4 class="card-title">Web Dev</h4><img src="static/img/programming.png" width="30%" style="width: 60px;">
+                      <p class="card-text" style="margin: 15px ;margin-top: 15px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col" style="margin: 30px;padding-right: 0;padding-left: 0;">
+              <div class="card card-hov">
+                  <div class="card-body text-center">
+                      <h4 class="card-title">App Dev</h4><img src="static/img/app-development.png" style="width: 60px;">
+                      <p class="card-text" style="margin: 15px;margin-top: 15px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col" style="margin: 30px;padding-right: 0;padding-left: 0;">
+              <div class="card card-hov">
+                  <div class="card-body text-center">
+                      <h4 class="card-title">SAP</h4><img src="static/img/sap(1).png" style="width: 60px;">
+                      <p class="card-text" style="margin: 15px;margin-top: 15px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col" style="margin: 30px;padding-right: 0;padding-left: 0;">
+            <div class="card card-hov">
+                <div class="card-body text-center">
+                    <h4 class="card-title">SAP</h4><img src="static/img/sap(1).png" style="width: 60px;">
+                    <p class="card-text" style="margin: 15px;margin-top: 15px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio</p>
                 </div>
-                <div class="col-xl-8">
-                    <div class="imac-mockup"><img class="device" src="{% static 'img/imac.svg' %}">
-                        <div class="screen" style="background-color: #ffffff;background-image: url(&quot;none&quot;);">
-                            <div style="padding-top: 30px;"><canvas data-bs-chart="{&quot;type&quot;:&quot;bar&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:&quot;#4e73df&quot;,&quot;borderColor&quot;:&quot;#4e73df&quot;,&quot;data&quot;:[&quot;4500&quot;,&quot;5300&quot;,&quot;6250&quot;,&quot;7800&quot;,&quot;9800&quot;,&quot;15000&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:true,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{&quot;display&quot;:false}}}"></canvas></div>
-                        </div>
-                    </div>
+            </div>
+          </div>
+        </div>
+      
+      <div class="row ml-auto mr-auto" style="max-width:100%;">
+        <div class="col" style="margin: 30px;padding-right: 0;padding-left: 0;">
+            <div class="card card-hov">
+                <div class="card-body text-center" data-bs-hover-animate="flash" style="padding-top: 20px;margin: 0px;">
+                    <h4 class="card-title">Web Dev</h4><img src="static/img/programming.png" width="30%" style="width: 60px;">
+                    <p class="card-text" style="margin: 15px ;margin-top: 15px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio.</p>
                 </div>
             </div>
         </div>
+        <div class="col" style="margin: 30px;padding-right: 0;padding-left: 0;">
+            <div class="card card-hov">
+                <div class="card-body text-center">
+                    <h4 class="card-title">App Dev</h4><img src="static/img/app-development.png" style="width: 60px;">
+                    <p class="card-text" style="margin: 15px;margin-top: 15px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio</p>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="margin: 30px;padding-right: 0;padding-left: 0;">
+            <div class="card card-hov">
+                <div class="card-body text-center">
+                    <h4 class="card-title">SAP</h4><img src="static/img/sap(1).png" style="width: 60px;">
+                    <p class="card-text" style="margin: 15px;margin-top: 15px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio</p>
+                </div>
+            </div>
+        </div>
+        <div class="col" style="margin: 30px;padding-right: 0;padding-left: 0;">
+          <div class="card card-hov">
+              <div class="card-body text-center">
+                  <h4 class="card-title">SAP</h4><img src="static/img/sap(1).png" style="width: 60px;">
+                  <p class="card-text" style="margin: 15px;margin-top: 15px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio</p>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
     </header>
     <section style="padding-top: 0px;">
-      <div class="container" style="border-top: 1px solid rgb(224,224,224);padding-top: 40px;">
+      <div class="container" style="padding-top: 40px;">
           <h1 id="service-offering-heading" style="font-family: ABeeZee, sans-serif;color: rgb(91,91,91);">Service Offerings</h1>
-       
-              <div class="card card1" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
+            <div class="card-group">
+              <div class="card card-service" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
                   <div class="card-body">
                       <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-sap-consulting' %}"><i class="la la-cubes" style="color: rgb(69,176,238);"></i></a></h4>
                       <h4 class="card-title" id="service-offering-heading"><a href="{% url 'services-sap-consulting' %}" style="color: rgb(91,91,91);font-family: ABeeZee, sans-serif;font-weight: normal;">SAP Consulting</a></h4>
                   </div>
               </div>
-              <div class="card card2" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
+              <div class="card card-service" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
                   <div class="card-body">
                       <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-corporate-training' %}"><i class="la la-industry" style="color: rgb(69,176,238);"></i></a></h4>
                       <h4 class="card-title" id="service-offering-heading"><a href="{% url 'services-corporate-training' %}" style="font-family: ABeeZee, sans-serif;font-weight: normal;color: rgb(91,91,91);">Corporate Training</a></h4>
                   </div>
               </div>
-              <div class="card card3" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
+              <div class="card card-service" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
                   <div class="card-body">
                       <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-professional-services' %}"><i class="la la-suitcase" style="color: rgb(69,176,238);"></i></a></h4>
                       <h4 class="card-title" id="service-offering-heading" style="text-align: center;"><a href="{% url 'services-professional-services' %}" style="font-family: ABeeZee, sans-serif;color: rgb(91,91,91);font-weight: normal;">Professional Services</a></h4>
                   </div>
               </div>
-              <div class="card card4" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
+              <div class="card card-service" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
                   <div class="card-body">
                       <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-program-management' %}"><i class="fas fa-people-carry" style="color: rgb(69,176,238);"></i></a></h4>
                       <h4 class="card-title" id="service-offering-heading" style="text-align: center;color: rgb(91,91,91);font-weight: normal;font-family: ABeeZee, sans-serif;"><a href="{% url 'services-program-management' %}" style="color: rgb(91,91,91);font-weight: normal;font-family: ABeeZee, sans-serif;">Program Management</a></h4>
                   </div>
               </div>
-              <div class="card card5" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
+              <div class="card card-service" id="service-offering-heading" style="border-left: 0px!important;border-top: 0px!important;border-bottom: 0px!important;border-right: 0;">
                   <div class="card-body">
                       <h4 class="card-title" style="text-align: center;font-size: 60px;"><a href="{% url 'services-center-of-excellence' %}"><i class="la la-globe" style="color: rgb(69,176,238);"></i></a></h4>
                       <h4 class="card-title" id="service-offering-heading" style="font-family: ABeeZee, sans-serif;color: rgb(91,91,91);"><a href="{% url 'services-center-of-excellence' %}" style="color: rgb(91,91,91);">Center of Excellence</a></h4>
-                </div>
+                  </div>
+              </div>
             </div>
-        
       </div>
-
     </section>
-    <section style="background-color: rgb(245,245,245);padding-top: 40px;">
+  <hr>
+    <section style="padding-top: 40px;padding:3% 15%;">
         <h1 style="text-align: center;margin-bottom: 20px;">The Expound Difference !</h1>
-        <div class="container border rounded-0" style="padding-top: 15px;background-color: #ffffff;">
+        <div class="container rounded-0" style="padding-top: 15px;background-color: #ffffff;font-family: 'Ubuntu',sans-serif;">
           <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2" style="margin-top: 5%;margin-bottom: 5%;">
-            <div class="col align-self-center"><img src="box.png" style="width: 50%;" /></div>
-            <div class="col text-center">
-                <p style="color: rgb(115,115,115);">First Step:</p>
-                <h3 class="text-center text-lg-center text-xl-center" style="margin-top: 3%;">Product</h3>
+            <div class="col-lg-6 align-self-center"><img src="static/img/cubes.png" style="width: 20%;" /></div>
+            <div class="col-lg-6 text-center">
+                <p style="color: rgb(115,115,115);font-family: 'Montserrat';">First Step:</p>
+                <h3 class="text-center text-lg-center text-xl-center" style="margin-top: 3%;color:#548CA8">Product</h3>
                 <p class="text-center align-content-lg-start"><br />Our solutions, accelerators, repository, reduce <br />project risks and duration which help in Rapid Implementation with Fast Run Approach.<br /><br /><br /></p>
             </div>
         </div>
-        <hr />
+        <hr style="border-top: dotted 1px; width: 10%;border-width: 10px;color:#B5EAEA">
         <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2" style="margin-top: 5%;margin-bottom: 5%;">
-            <div class="col order-2 order-lg-1 order-xl-1">
+            <div class="col-lg-6 order-2 order-lg-1 order-xl-1">
                 <header></header>
-                <p style="color: rgb(115,115,115);">Second Step:</p>
-                <h3 class="text-center" style="margin-top: 3%;">Process</h3>
+                <p style="color: rgb(115,115,115);font-family: 'Montserrat';">Second Step:</p>
+                <h3 class="text-center" style="margin-top: 3%;color:#548CA8">Process</h3>
                 <p class="text-center"><br />SAP Business process management tool with activate methodology for implementation, automative support tool to improve service delivery and efficiency.<br /><br /></p>
             </div>
-            <div class="col align-self-center order-1 order-lg-2 order-xl-2"><img src="engineering.png" style="width: 50%;" /></div>
+            <div class="col-lg-6 align-self-center order-1 order-lg-2 order-xl-2"><img src="static/img/process.png" style="width: 20%;" /></div>
         </div>
-        <hr />
+        <hr style="border-top: dotted 1px; width: 10%;border-width: 10px;color:#B5EAEA">
         <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2" style="margin-top: 5%;margin-bottom: 5%;">
-            <div class="col align-self-center"><img src="human-capital.png" style="width: 50%;" /></div>
-            <div class="col">
-                <p style="color: rgb(115,115,115);">Third step:</p>
-                <h3 class="text-center" style="margin-top: 3%;">Human Capital</h3>
+            <div class="col-lg-6 align-self-center"><img src="static/img/capital-venture.png" style="width: 20%;" /></div>
+            <div class="col-lg-6">
+                <p style="color: rgb(115,115,115);font-family: 'Montserrat';">Third step:</p>
+                <h3 class="text-center" style="margin-top: 3%;color:#548CA8">Human Capital</h3>
                 <p><br />Human capital refers to the employees Skill, knowledge, experience and <br />their capabilities to deliver stake holders expectations.Therefore we <br />attract, develop and retain the best people.<br /><br /></p>
             </div>
         </div>
-        <hr />
+        <hr style="border-top: dotted 1px; width: 10%;border-width: 10px;color:#B5EAEA">
         <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2" style="margin-top: 5%;margin-bottom: 5%;">
-            <div class="col order-2 order-lg-1 order-xl-1">
-                <p style="color: rgb(115,115,115);">Fourth Step:</p>
-                <h3 style="margin-top: 3%;">Results</h3>
+            <div class="col-lg-6 order-2 order-lg-1 order-xl-1">
+                <p style="color: rgb(115,115,115);font-family: 'Montserrat';">Fourth Step:</p>
+                <h3 style="margin-top: 3%;color:#548CA8">Results</h3>
                 <p><br />A global template defines the solution blueprint of the global ERP <br />solution. It provides the basic information on the standard processes<br /><br /></p>
             </div>
-            <div class="col align-self-center order-1 order-lg-2 order-xl-2"><img src="stadistics.png" style="width: 50%;" /></div>
+            <div class="col-lg-6 align-self-center order-1 order-lg-2 order-xl-2"><img src="static/img/data-analytics.png" style="width: 20%;" /></div>
         </div>
         </div>
     </section>
+    <hr>
     <section style="padding-top: 30px;">
         <div class="container">
             <h1 style="color: rgb(0,0,0);border-bottom: 3px solid black;font-family: ABeeZee, sans-serif;margin-bottom: 30px;padding-bottom: 7px;">Solutions we offer</h1>
@@ -252,63 +320,62 @@ margin-left: 40px;
 
 
   </style>
-    <div class="container">
+   
       <h1 style="color: rgb(0,0,0);border-bottom: 3px solid black;font-family: ABeeZee, sans-serif;margin-bottom: 30px;padding-bottom: 7px;">Our clients</h1>
     <br>
-    <div class="slider">
-      <div class="slide-track">
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/Official_logo_of_Piramal_Enterprises_and_Group.svg" height="100" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/deesan.png" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/cooperstandard.png" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/Gujarat-Heavy-Chemicals-Ltd.jpg" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/client-shree-mahavir-metal.jpg" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/MAHA.jpg" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/go.png" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/tata.jpg" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/alkyl.jpeg" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/tk.png" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/mt.png" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/Sterling-Wilson.jpg" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/kirloskar-logo-92C38BA575-seeklogo.com.png" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/zensar.jpeg" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/GT.png" height="200" width="250" alt="" />
-        </div>
-        <div class="slide">
-          <img src="http://expoundtechnivo.com/static/clients/IS.png" height="200" width="250" alt="" />
-        </div>
+    <div class="owl-carousel owl-theme text-center">
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/Official_logo_of_Piramal_Enterprises_and_Group.svg" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/deesan.png" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/cooperstandard.png" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/Gujarat-Heavy-Chemicals-Ltd.jpg" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/client-shree-mahavir-metal.jpg" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/MAHA.jpg" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/go.png" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/tata.jpg" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/alkyl.jpeg" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/tk.png" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/mt.png" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/Sterling-Wilson.jpg" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/kirloskar-logo-92C38BA575-seeklogo.com.png" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/zensar.jpeg" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/GT.png" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
+      </div>
+      <div class="item">
+        <img src="http://expoundtechnivo.com/static/clients/IS.png" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
       </div>
     </div>
+    
     <hr>
-
+  
 </section>
 
     <!--
