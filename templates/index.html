@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
     <!-- for solutions we offer mobile view  -->
+
     <style>
         @media (min-width: 700px) {
               .solutionweoffer {
@@ -23,9 +24,9 @@
           transition-duration:1s;
          
         }
-        .card-popup:hover{
-          background-color:rgb(120, 128, 149);
-          width:39%;
+        .card1::after{
+          width:100%;
+          
           height:50%;
           opacity:0;
           transition-duration:3s; 
@@ -50,13 +51,14 @@
           transform: scale(1.1);
         }
     </style>
+
     <!-- for solutions we offer mobile view  -->
 
     <section class="bg-primary text-white mb-0" style="background-image: url(&quot;{% static 'img/austin-distel-wawEfYdpkag-unsplash.jpg' %}&quot;);background-size: cover;background-position: 50%;background-repeat: no-repeat;opacity: 1;margin-top: 5px;background-color: rgba(255,255,255,0)!important;filter: invert(0%);">
         <div class="container border rounded-0" style="border: none!important;">
             <div class="row" style="border: none!important;">
                 <div class="col-xl-6 offset-xl-0" style="opacity: 0;"></div>
-                <div class="col-lg-4 col-xl-5 text-center mr-auto" style="padding-bottom: 41px;background-color: rgba(255,255,255,0.8);opacity: 1;border: solid;color: rgb(255,255,255);">
+                <div class="col-lg-4 col-xl-5 text-center mr-auto" style="padding-bottom: 41px;background-color: rgba(255,255,255,1);opacity: 0.8;border: solid;color: rgb(255,255,255);">
                     <h2 class="text-uppercase text-center text-white" style="color: rgb(0,0,0)!important;padding-top: 50px;font-size: 50px;text-transform: none!important;font-family: ABeeZee, sans-serif;">We at Expound</h2>
                     <p class="lead" style="color: rgb(0,0,0);padding-left: 30px;background-color: rgba(152,152,152,0);font-family: ABeeZee,;">A full service provider of SAP solutions, we offer our customers a broad range of SAP consulting and support services.</p><a class="btn btn-outline-light btn-xl" role="button" id="landing-img-button" href="{% url 'contact' %}" style="color: rgb(7,11,8);border-color: rgb(45,80,112);margin-top: 10px;background-color: rgba(248,249,250,0.38);"><span>Get in touch &gt;</span></a></div>
             </div>
@@ -319,8 +321,8 @@ margin-left: 40px;
 
   </style>
    
-      <h1 style="color: rgb(0,0,0);border-bottom: 3px solid black;font-family: ABeeZee, sans-serif;margin-bottom: 30px;padding-bottom: 7px;">Our clients</h1>
-    <br>
+      <h1 style="color: rgb(0,0,0);font-family: ABeeZee, sans-serif;margin-bottom: 30px;padding-bottom: 7px;">Our clients</h1>
+    <hr style="border: solid 1.5px;">
     <div class="owl-carousel owl-theme text-center">
       <div class="item">
         <img src="http://expoundtechnivo.com/static/clients/Official_logo_of_Piramal_Enterprises_and_Group.svg" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
@@ -371,17 +373,16 @@ margin-left: 40px;
         <img src="http://expoundtechnivo.com/static/clients/IS.png" style="height:150px;width:200px;position:relative;left:50px;" alt="" />
       </div>
     </div>
-    
-    <hr>
+    <hr style="border: solid 1.5px;">
   
 </section>
-    
-    <!--  
+
+    <!--
     <section id="chat" class="bg-primary text-white mb-0" style="background-color: rgb(245,245,245)!important;padding-top: 0px;">
         <h1 style="color: rgb(0,0,0);text-align: center;padding-bottom: 20px;padding-top: 20px;">We're at your Service</h1>
         <div class="container border rounded-0" style="border-width: 0px!important;background-color: #ffffff;">
     <div class="row rounded-lg overflow-hidden shadow">
-    
+
     <div class="col-5 px-0">
       <div class="bg-white">
 
@@ -486,7 +487,7 @@ margin-left: 40px;
     <!--Chat Box
     <div class="col-7 px-0" style="border: 1px solid rgb(248,249,250)!important">
       <div class="px-4 py-5 chat-box bg-white">-->
-        <!-- Sender Message 
+        <!-- Sender Message
         <div class="media w-50 mb-3"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
           <div class="media-body ml-3">
             <div class="bg-light rounded py-2 px-3 mb-2">
@@ -497,7 +498,7 @@ margin-left: 40px;
         </div>
         -->
         <!-- Reciever Message-->
-        <!-- 
+        <!--
         <div class="media w-50 ml-auto mb-3">
           <div class="media-body">
             <div class="rounded py-2 px-3 mb-2" style="background-color:#66b1ed">
@@ -508,7 +509,7 @@ margin-left: 40px;
         </div>
  -->
         <!-- Sender Message-->
-        <!-- 
+        <!--
         <div class="media w-50 mb-3"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
           <div class="media-body ml-3">
             <div class="bg-light rounded py-2 px-3 mb-2">
@@ -519,7 +520,7 @@ margin-left: 40px;
         </div>
  -->
         <!-- Reciever Message-->
-        <!-- 
+        <!--
         <div class="media w-50 ml-auto mb-3">
           <div class="media-body">
             <div class="rounded py-2 px-3 mb-2" style="background-color:#66b1ed">
@@ -530,7 +531,7 @@ margin-left: 40px;
         </div>
  -->
         <!-- Sender Message-->
-        <!-- 
+        <!--
         <div class="media w-50 mb-3"><img src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user" width="50" class="rounded-circle">
           <div class="media-body ml-3">
             <div class="bg-light rounded py-2 px-3 mb-2">
@@ -541,7 +542,7 @@ margin-left: 40px;
         </div>
  -->
         <!-- Reciever Message-->
-        <!-- 
+        <!--
         <div class="media w-50 ml-auto mb-3">
           <div class="media-body">
             <div class="rounded py-2 px-3 mb-2" style="background-color:#66b1ed">
@@ -554,7 +555,7 @@ margin-left: 40px;
       </div>
  -->
       <!-- Typing area -->
-      <!-- 
+      <!--
       <form action="#" class="bg-light">
         <div class="input-group">
           <input type="text" placeholder="Type a message" aria-describedby="button-addon2" class="form-control rounded-0 border-0 py-4 bg-light">

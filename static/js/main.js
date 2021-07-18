@@ -1,5 +1,7 @@
 $('.owl-carousel').owlCarousel({
-    loop:true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    navigation: false,
     margin:10,
     responsiveClass:true,
     responsive:{
@@ -17,4 +19,7 @@ $('.owl-carousel').owlCarousel({
             loop:true
         }
     }
-})
+    
+});
+$( ".owl-prev").html('<i class="fa fa-chevron-left"></i>');
+$( ".owl-next").html('<i class="fa fa-chevron-right"></i>');
